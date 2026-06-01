@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(dir \"C:\\\\Users\\\\Patrik\\\\Studio GoodLook\")",
+      "PowerShell($extract = \"C:\\\\Users\\\\Patrik\\\\Studio GoodLook\\\\_source\"; if \\(!\\(Test-Path $extract\\)\\) { New-Item -ItemType Directory -Path $extract -Force | Out-Null }; Expand-Archive -Path \"C:\\\\Users\\\\Patrik\\\\Pictures\\\\Salon.zip\" -DestinationPath $extract -Force; Get-ChildItem -Path $extract -Recurse | Format-Table FullName, Length -AutoSize | Out-String)",
+      "PowerShell(Copy-Item \"C:\\\\Users\\\\Patrik\\\\Studio GoodLook\\\\_source\\\\Salon\\\\0c0283a9-1d4d-4220-bf6a-447a94f3ce82.jfif\" \"C:\\\\Users\\\\Patrik\\\\Studio GoodLook\\\\_source\\\\Salon\\\\hair1.jpg\")",
+      "PowerShell(Copy-Item \"C:\\\\Users\\\\Patrik\\\\Studio GoodLook\\\\_source\\\\Salon\\\\10c9eedd-a6ae-4ed3-942b-1b1e7f903864.jfif\" \"C:\\\\Users\\\\Patrik\\\\Studio GoodLook\\\\_source\\\\Salon\\\\hair2.jpg\")",
+      "PowerShell(Copy-Item \"C:\\\\Users\\\\Patrik\\\\Studio GoodLook\\\\_source\\\\Salon\\\\4c4c1d1a-0b88-430f-b248-8d80ed86199e.jfif\" \"C:\\\\Users\\\\Patrik\\\\Studio GoodLook\\\\_source\\\\Salon\\\\hair3.jpg\")",
+      "PowerShell(Copy-Item \"C:\\\\Users\\\\Patrik\\\\Studio GoodLook\\\\_source\\\\Salon\\\\sta�en� soubor.jfif\" \"C:\\\\Users\\\\Patrik\\\\Studio GoodLook\\\\_source\\\\Salon\\\\hair4.jpg\")",
+      "PowerShell(\"Renamed\")",
+      "WebFetch(domain:studio-goodlook.cz)",
+      "PowerShell($root = \"C:\\\\Users\\\\Patrik\\\\Studio GoodLook\"; Get-ChildItem -Path $root -Recurse -Exclude \"_source\", \".git\", \"node_modules\" | Where-Object { -not $_.PSIsContainer -and $_.FullName -notmatch \"_source|\\\\.git\" } | Select-Object FullName, Length | Sort-Object FullName | Format-Table -AutoSize | Out-String)",
+      "mcp__Claude_Preview__preview_start",
+      "Bash(git init *)",
+      "Bash(git branch *)",
+      "Bash(git add *)"
+    ]
+  }
+}

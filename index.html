@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#1B3A47" />
+    <meta name="description" content="Studio GOODLOOK — kadeřnické studio v Praze 14. Stříhání, barvení, balayage, svatební účesy v atmosféře plné rostlin, světla a uměleckých maleb." />
+    <meta name="robots" content="index, follow" />
+    <title>Studio GOODLOOK · Kadeřnictví v Praze, kde vlasy rozkvétají</title>
+
+    <link rel="canonical" href="https://studio-goodlook.cz/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Studio GOODLOOK" />
+    <meta property="og:title" content="Studio GOODLOOK · Kadeřnictví v Praze" />
+    <meta property="og:description" content="Kadeřnické studio v Praze 14 — stříhání, barvení, balayage a svatební účesy v ateliéru plném rostlin a uměleckých maleb." />
+    <meta property="og:url" content="https://studio-goodlook.cz/" />
+    <meta property="og:image" content="https://studio-goodlook.cz/assets/og-image.jpg" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@300;400;500;600;700;800&family=Caveat:wght@500;600&display=swap"
+        rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+
+    <link rel="preload" as="image" href="assets/img/mural-hero.png" fetchpriority="high" />
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HairSalon",
+        "name": "Studio GOODLOOK",
+        "description": "Kadeřnické studio v Praze 14 — stříhání, barvení, balayage, svatební účesy.",
+        "image": "https://studio-goodlook.cz/assets/og-image.jpg",
+        "@id": "https://studio-goodlook.cz/",
+        "url": "https://studio-goodlook.cz/",
+        "telephone": "+420731472773",
+        "priceRange": "$$",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "U Hostavického potoka 830/26",
+            "addressLocality": "Praha 14 — Jahodnice",
+            "postalCode": "198 00",
+            "addressCountry": "CZ"
+        },
+        "openingHoursSpecification": [
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday"], "opens": "08:30", "closes": "20:00" },
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Wednesday","Thursday"], "opens": "07:30", "closes": "14:00" },
+            { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "08:00", "closes": "12:00" }
+        ],
+        "sameAs": ["https://www.facebook.com/studio.goodlook"]
+    }
+    </script>
+</head>
+<body class="is-loading">
+    <a class="skip-link" href="#home">Přejít na obsah</a>
+
+    <!-- ============ LOADER ============ -->
+    <div class="loader" id="loader" aria-hidden="true">
+        <div class="loader__scissors">
+            <svg viewBox="0 0 80 80" width="64" height="64" aria-hidden="true">
+                <g fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="20" cy="56" r="9"/>
+                    <circle cx="60" cy="56" r="9"/>
+                    <path d="M27 50 L72 8"/>
+                    <path d="M53 50 L8 8"/>
+                    <path d="M40 38 L40 30"/>
+                </g>
+            </svg>
+        </div>
+        <p class="loader__text">Rozkvétáme<span class="loader__dots">...</span></p>
+        <div class="loader__bar"><span id="loaderBar"></span></div>
+    </div>
+
+    <!-- ============ CURSOR ============ -->
+    <div class="cursor" id="cursor" aria-hidden="true"></div>
+
+    <!-- ============ PROGRESS BAR ============ -->
+    <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+    <!-- ============ NAV ============ -->
+    <header class="nav" id="nav">
+        <a href="#home" class="nav__brand" aria-label="Studio GOODLOOK — domů">
+            <span class="nav__logo">
+                <svg viewBox="0 0 60 36" width="60" height="36" aria-hidden="true">
+                    <rect x="1" y="1" width="58" height="34" rx="2" fill="none" stroke="currentColor" stroke-width="1.5"/>
+                    <path d="M30 4 L30 10 M27 7 L33 7" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/>
+                </svg>
+            </span>
+            <span class="nav__name"><em>good</em>look</span>
+        </a>
+
+        <nav class="nav__menu" id="navMenu" aria-label="Hlavní menu">
+            <a href="#home" class="nav__link">Úvod</a>
+            <a href="#about" class="nav__link">O nás</a>
+            <a href="#services" class="nav__link">Služby</a>
+            <a href="#gallery" class="nav__link">Atelier</a>
+            <a href="#team" class="nav__link">Tým</a>
+            <a href="#visit" class="nav__link">Kontakt</a>
+        </nav>
+
+        <a href="https://goodlook.snippet.myfox.cz/" target="_blank" rel="noopener" class="btn btn--solid nav__cta">Rezervovat</a>
+
+        <button class="nav__burger" id="navBurger" aria-label="Otevřít menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </header>
+
+    <main>
+        <!-- ============ HERO ============ -->
+        <section class="hero" id="home">
+            <!-- The MURAL — now the full-bleed main background -->
+            <div class="hero__mural" data-depth="0.03">
+                <img src="assets/img/mural-hero.png" alt="Žena s vlnitými vlasy plnými květů — autorská malba na zdi Studia GOODLOOK" width="1200" height="700" fetchpriority="high" />
+            </div>
+
+            <!-- Soft pastel haze — Qelora-style shades laid over the white mural -->
+            <div class="hero__tint" aria-hidden="true"></div>
+            <div class="blob blob--lavender" data-depth="0.05" aria-hidden="true"></div>
+            <div class="blob blob--sage"     data-depth="0.07" aria-hidden="true"></div>
+
+            <!-- Bottom legibility scrim so the headline reads cleanly -->
+            <div class="hero__scrim" aria-hidden="true"></div>
+
+            <!-- Layered parallax scene — animations that play around the hair -->
+            <div class="hero__scene" id="heroScene" aria-hidden="true">
+                <!-- Twinkling glints over the flowers in the hair -->
+                <svg class="sparkle sparkle--1" data-depth="0.16" viewBox="0 0 24 24"><path d="M12 0C13.2 7.6 16.4 10.8 24 12 16.4 13.2 13.2 16.4 12 24 10.8 16.4 7.6 13.2 0 12 7.6 10.8 10.8 7.6 12 0Z"/></svg>
+                <svg class="sparkle sparkle--2" data-depth="0.22" viewBox="0 0 24 24"><path d="M12 0C13.2 7.6 16.4 10.8 24 12 16.4 13.2 13.2 16.4 12 24 10.8 16.4 7.6 13.2 0 12 7.6 10.8 10.8 7.6 12 0Z"/></svg>
+                <svg class="sparkle sparkle--3" data-depth="0.12" viewBox="0 0 24 24"><path d="M12 0C13.2 7.6 16.4 10.8 24 12 16.4 13.2 13.2 16.4 12 24 10.8 16.4 7.6 13.2 0 12 7.6 10.8 10.8 7.6 12 0Z"/></svg>
+                <svg class="sparkle sparkle--4" data-depth="0.28" viewBox="0 0 24 24"><path d="M12 0C13.2 7.6 16.4 10.8 24 12 16.4 13.2 13.2 16.4 12 24 10.8 16.4 7.6 13.2 0 12 7.6 10.8 10.8 7.6 12 0Z"/></svg>
+                <svg class="sparkle sparkle--5" data-depth="0.18" viewBox="0 0 24 24"><path d="M12 0C13.2 7.6 16.4 10.8 24 12 16.4 13.2 13.2 16.4 12 24 10.8 16.4 7.6 13.2 0 12 7.6 10.8 10.8 7.6 12 0Z"/></svg>
+                <svg class="sparkle sparkle--6" data-depth="0.24" viewBox="0 0 24 24"><path d="M12 0C13.2 7.6 16.4 10.8 24 12 16.4 13.2 13.2 16.4 12 24 10.8 16.4 7.6 13.2 0 12 7.6 10.8 10.8 7.6 12 0Z"/></svg>
+
+                <!-- Petals drifting up out of the hair -->
+                <svg class="petal petal--1" data-depth="0.26" viewBox="0 0 60 60" aria-hidden="true">
+                    <path d="M30 4 C46 14, 50 30, 30 56 C10 30, 14 14, 30 4 Z" fill="#7CA8D8" stroke="#1A1A22" stroke-width="1.3"/>
+                </svg>
+                <svg class="petal petal--2" data-depth="0.30" viewBox="0 0 60 60" aria-hidden="true">
+                    <path d="M30 4 C46 14, 50 30, 30 56 C10 30, 14 14, 30 4 Z" fill="#9B7EBD" stroke="#1A1A22" stroke-width="1.3"/>
+                </svg>
+                <svg class="petal petal--3" data-depth="0.22" viewBox="0 0 60 60" aria-hidden="true">
+                    <path d="M30 4 C46 14, 50 30, 30 56 C10 30, 14 14, 30 4 Z" fill="#7CA8D8" stroke="#1A1A22" stroke-width="1.3"/>
+                </svg>
+
+                <!-- A bloom slowly turning among the curls -->
+                <svg class="flower flower--back" data-depth="0.18" viewBox="0 0 80 80" aria-hidden="true">
+                    <g fill="#9B7EBD" stroke="#1A1A22" stroke-width="1.2">
+                        <ellipse cx="40" cy="22" rx="9" ry="14"/>
+                        <ellipse cx="58" cy="40" rx="14" ry="9"/>
+                        <ellipse cx="40" cy="58" rx="9" ry="14"/>
+                        <ellipse cx="22" cy="40" rx="14" ry="9"/>
+                        <ellipse cx="52" cy="28" rx="11" ry="8" transform="rotate(45 52 28)"/>
+                        <ellipse cx="52" cy="52" rx="11" ry="8" transform="rotate(-45 52 52)"/>
+                        <ellipse cx="28" cy="52" rx="11" ry="8" transform="rotate(45 28 52)"/>
+                        <ellipse cx="28" cy="28" rx="11" ry="8" transform="rotate(-45 28 28)"/>
+                        <circle cx="40" cy="40" r="6" fill="#1A1A22"/>
+                    </g>
+                </svg>
+
+                <!-- Floating scissors (signature touch) -->
+                <svg class="scissors-float" data-depth="0.32" viewBox="0 0 80 80" aria-hidden="true">
+                    <g fill="none" stroke="#1B3A47" stroke-width="2" stroke-linecap="round">
+                        <circle cx="22" cy="58" r="8"/>
+                        <circle cx="58" cy="58" r="8"/>
+                        <path d="M28 53 L72 12"/>
+                        <path d="M52 53 L8 12"/>
+                    </g>
+                </svg>
+            </div>
+
+            <div class="hero__content">
+                <p class="hero__eyebrow reveal">✦ Studio GOODLOOK · Praha 14 ✦</p>
+                <h1 class="hero__title">
+                    <span class="reveal" style="--d:.05s">Kde vlasy</span>
+                    <span class="reveal hero__title--accent" style="--d:.18s">rozkvétají</span>
+                    <span class="reveal" style="--d:.30s">jako zahrada.</span>
+                </h1>
+                <p class="hero__sub reveal" style="--d:.45s">
+                    Kadeřnické studio plné rostlin, světla a originálních maleb na zdech.
+                    Stříhání, barvy, balayage a svatební účesy — s péčí, která vám sluší.
+                </p>
+                <div class="hero__actions reveal" style="--d:.60s">
+                    <a href="https://goodlook.snippet.myfox.cz/" target="_blank" rel="noopener" class="btn btn--solid">Rezervovat termín</a>
+                    <a href="#services" class="btn btn--ghost">Naše služby →</a>
+                </div>
+                <div class="hero__stats reveal" style="--d:.75s">
+                    <div class="stat"><span class="stat__num" data-count="12">0</span><span class="stat__label">let zkušeností</span></div>
+                    <div class="stat"><span class="stat__num" data-count="4">0</span><span class="stat__label">kadeřnice</span></div>
+                    <div class="stat"><span class="stat__num" data-count="2400" data-suffix="+">0</span><span class="stat__label">spokojených hostů</span></div>
+                </div>
+            </div>
+
+            <a href="#about" class="hero__scroll" aria-label="Posunout dolů">
+                <span class="hero__scroll-dot"></span>
+                <span class="hero__scroll-text">Listujte</span>
+            </a>
+        </section>
+
+        <!-- ============ MARQUEE ============ -->
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee__track">
+                <span>Střih</span><span class="dot">❀</span><span>Barva</span><span class="dot">❀</span>
+                <span>Balayage</span><span class="dot">❀</span><span>OlaPlex</span><span class="dot">❀</span>
+                <span>Svatební účes</span><span class="dot">❀</span><span>Vizážistka</span><span class="dot">❀</span>
+                <span>Střih</span><span class="dot">❀</span><span>Barva</span><span class="dot">❀</span>
+                <span>Balayage</span><span class="dot">❀</span><span>OlaPlex</span><span class="dot">❀</span>
+                <span>Svatební účes</span><span class="dot">❀</span><span>Vizážistka</span><span class="dot">❀</span>
+            </div>
+        </div>
+
+        <!-- ============ ABOUT ============ -->
+        <section class="story" id="about">
+            <div class="story__media reveal">
+                <div class="story__img-wrap" data-parallax="0.10">
+                    <picture>
+                        <img class="story__img" src="assets/img/gallery/interior-bar.webp" width="1200" height="900"
+                             loading="lazy" decoding="async"
+                             alt="Recepce Studia GOODLOOK s dřevěnými detaily, rostlinami a malbou na zdi" />
+                    </picture>
+                </div>
+                <div class="story__img-wrap story__img-wrap--float" data-parallax="-0.08">
+                    <picture>
+                        <img class="story__img" src="assets/img/gallery/mural-detail.png" width="900" height="1200"
+                             loading="lazy" decoding="async"
+                             alt="Detail malby ženy s květy ve vlasech na stěně studia" />
+                    </picture>
+                </div>
+                <div class="story__badge">
+                    <span class="story__badge-num">100%</span>
+                    <span class="story__badge-text">Profesionální péče</span>
+                </div>
+            </div>
+            <div class="story__text">
+                <p class="section__eyebrow reveal">— Náš příběh</p>
+                <h2 class="section__title reveal" style="--d:.1s">
+                    Salón, kde se z&nbsp;vlasů<br/>stává <em>umění</em>.
+                </h2>
+                <p class="reveal" style="--d:.2s">
+                    Studio GOODLOOK vzniklo s jednoduchou myšlenkou: chtěli jsme vytvořit místo,
+                    kam se budete těšit. Místo, kde dýchá příroda, vůně kávy se mísí s vůní
+                    šamponu a kde každý odchází nejen s krásným účesem, ale i s úsměvem.
+                </p>
+                <p class="reveal" style="--d:.3s">
+                    Naše ateliér zdobí původní malby na zdech — ženy s vlasy plnými květů,
+                    rostliny, ptáci. Když u nás sedíte v křesle, jste obklopeni uměním,
+                    které vám připomene, že krása je všude kolem nás.
+                </p>
+                <ul class="story__list reveal" style="--d:.4s">
+                    <li>Kosmetika L'Oréal a Wella Professionals</li>
+                    <li>Šetrné technologie OlaPlex a Power Dose</li>
+                    <li>Specializace na svatební účesy</li>
+                    <li>Dámský i pánský kadeřník · vizážistka</li>
+                </ul>
+                <a href="#services" class="btn btn--solid reveal" style="--d:.5s">Prohlédnout služby</a>
+            </div>
+        </section>
+
+        <!-- ============ SERVICES ============ -->
+        <section class="menu" id="services">
+            <div class="section__head">
+                <p class="section__eyebrow reveal">— Naše služby</p>
+                <h2 class="section__title reveal" style="--d:.1s">Co pro&nbsp;vás umíme</h2>
+                <p class="section__lead reveal" style="--d:.2s">
+                    Od jednoduchého střihu po kompletní svatební proměnu. Najeďte na kartu
+                    a&nbsp;nechte ji ožít — každá z&nbsp;nich nabízí to nejlepší, co máme.
+                </p>
+            </div>
+
+            <div class="menu__filters reveal" style="--d:.3s" id="menuFilters">
+                <button class="chip is-active" data-filter="all">Vše</button>
+                <button class="chip" data-filter="cut">Střih & mytí</button>
+                <button class="chip" data-filter="color">Barva</button>
+                <button class="chip" data-filter="treat">Péče</button>
+                <button class="chip" data-filter="event">Příležitost</button>
+            </div>
+
+            <div class="menu__grid" id="menuGrid">
+                <!-- cards injected by JS -->
+            </div>
+        </section>
+
+        <!-- ============ PROCESS ============ -->
+        <section class="craft" id="craft">
+            <div class="craft__head">
+                <p class="section__eyebrow reveal">— Jak to&nbsp;u nás chodí</p>
+                <h2 class="section__title reveal" style="--d:.1s">Vaše návštěva, krok&nbsp;za&nbsp;krokem</h2>
+            </div>
+            <div class="craft__steps">
+                <article class="craft-step reveal" style="--d:.05s">
+                    <span class="craft-step__no">01</span>
+                    <div class="craft-step__icon" aria-hidden="true">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M24 6v8M24 34v8M6 24h8M34 24h8M11 11l6 6M31 31l6 6M11 37l6-6M31 17l6-6"/>
+                            <circle cx="24" cy="24" r="5"/>
+                        </svg>
+                    </div>
+                    <h3>Konzultace</h3>
+                    <p>Sedneme si u kávy, probereme, co byste si přáli — a&nbsp;co bude vašim vlasům opravdu slušet.</p>
+                </article>
+                <article class="craft-step reveal" style="--d:.15s">
+                    <span class="craft-step__no">02</span>
+                    <div class="craft-step__icon" aria-hidden="true">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M24 8v18M16 14l8 12 8-12"/>
+                            <ellipse cx="24" cy="36" rx="14" ry="4"/>
+                        </svg>
+                    </div>
+                    <h3>Péče</h3>
+                    <p>Důkladné mytí, masáž a&nbsp;ošetření vlasové pokožky šetrnou kosmetikou L'Oréal a&nbsp;Wella.</p>
+                </article>
+                <article class="craft-step reveal" style="--d:.25s">
+                    <span class="craft-step__no">03</span>
+                    <div class="craft-step__icon" aria-hidden="true">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="14" cy="34" r="6"/>
+                            <circle cx="34" cy="34" r="6"/>
+                            <path d="M19 30 L42 8M29 30 L6 8"/>
+                        </svg>
+                    </div>
+                    <h3>Proměna</h3>
+                    <p>Střih, barva nebo balayage od kadeřnic, které svou práci znají do nejmenšího detailu.</p>
+                </article>
+                <article class="craft-step reveal" style="--d:.35s">
+                    <span class="craft-step__no">04</span>
+                    <div class="craft-step__icon" aria-hidden="true">
+                        <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M24 6 L28 18 L40 18 L30 26 L34 38 L24 30 L14 38 L18 26 L8 18 L20 18 Z"/>
+                        </svg>
+                    </div>
+                    <h3>Rozkvět</h3>
+                    <p>Odejdete s účesem, který vám sluší — a&nbsp;s&nbsp;pocitem, že jste si dnes dali to nejlepší.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ============ GALLERY ============ -->
+        <section class="gallery" id="gallery">
+            <div class="section__head">
+                <p class="section__eyebrow reveal">— Atelier</p>
+                <h2 class="section__title reveal" style="--d:.1s">Prostor, kde se vám bude líbit</h2>
+                <p class="section__lead reveal" style="--d:.2s">
+                    Teplé dřevo, zeleň, měkké světlo a&nbsp;umělecké malby na každé stěně.
+                    Podívejte se, kde si na vás uděláme čas.
+                </p>
+            </div>
+            <div class="gallery__grid" id="galleryGrid">
+                <figure class="gallery__item gallery__item--tall reveal" data-tilt tabindex="0" role="button" aria-label="Zvětšit: Recepce">
+                    <img src="assets/img/gallery/interior-bar.webp" width="1356" height="897" loading="lazy" decoding="async" alt="Dřevěná recepce s logem GOODLOOK, rostlinami a malbou na zdi" />
+                    <span>Recepce</span>
+                </figure>
+                <figure class="gallery__item reveal" style="--d:.1s" data-tilt tabindex="0" role="button" aria-label="Zvětšit: Křesla">
+                    <img src="assets/img/gallery/interior-chairs.webp" width="1366" height="897" loading="lazy" decoding="async" alt="Křesla u zrcadel s malbou vousáče na zdi" />
+                    <span>Křesla</span>
+                </figure>
+                <figure class="gallery__item reveal" style="--d:.2s" data-tilt tabindex="0" role="button" aria-label="Zvětšit: Lounge">
+                    <img src="assets/img/gallery/interior-lounge.webp" width="1144" height="846" loading="lazy" decoding="async" alt="Posezení s květinami a dřevěnými policemi" />
+                    <span>Lounge</span>
+                </figure>
+                <figure class="gallery__item gallery__item--wide reveal" style="--d:.1s" data-tilt tabindex="0" role="button" aria-label="Zvětšit: Stolek u sedačky">
+                    <img src="assets/img/gallery/interior-table.png" width="1356" height="897" loading="lazy" decoding="async" alt="Stolek s kávou a magazínem nad podlahovou malbou" />
+                    <span>Detail</span>
+                </figure>
+                <figure class="gallery__item reveal" style="--d:.2s" data-tilt tabindex="0" role="button" aria-label="Zvětšit: Zákoutí">
+                    <img src="assets/img/gallery/interior-coffee.png" width="354" height="600" loading="lazy" decoding="async" alt="Klidné zákoutí s rostlinou, kávou a malbou" />
+                    <span>Zákoutí</span>
+                </figure>
+            </div>
+        </section>
+
+        <!-- ============ TEAM ============ -->
+        <section class="team" id="team">
+            <div class="section__head">
+                <p class="section__eyebrow reveal">— Náš tým</p>
+                <h2 class="section__title reveal" style="--d:.1s">Ruce, kterým&nbsp;můžete věřit</h2>
+                <p class="section__lead reveal" style="--d:.2s">
+                    Čtyři kadeřnice se srdcem na pravém místě a&nbsp;léty zkušeností v&nbsp;každém pohybu nůžek.
+                </p>
+            </div>
+            <div class="team__grid">
+                <article class="team-card reveal" style="--d:.05s">
+                    <div class="team-card__avatar" data-init="MJ"></div>
+                    <h3>Marie Jarolímková</h3>
+                    <p class="team-card__role">Majitelka · master stylist</p>
+                    <p>Zakladatelka studia. Svatební účesy, slavnostní úpravy a&nbsp;dlouholeté „dvorní" klientky.</p>
+                </article>
+                <article class="team-card reveal" style="--d:.15s">
+                    <div class="team-card__avatar" data-init="HH"></div>
+                    <h3>Helena Horáčková</h3>
+                    <p class="team-card__role">Barva &amp; balayage</p>
+                    <p>Specialistka na barvení, melír a&nbsp;balayage. Když chcete změnu, kterou ostatní budou obdivovat.</p>
+                </article>
+                <article class="team-card reveal" style="--d:.25s">
+                    <div class="team-card__avatar" data-init="OS"></div>
+                    <h3>Olesya Saska</h3>
+                    <p class="team-card__role">Střih &amp; styling</p>
+                    <p>Mistryně střihu a&nbsp;každodenního stylingu. Přesné nůžky a&nbsp;cit pro tvar obličeje.</p>
+                </article>
+                <article class="team-card reveal" style="--d:.35s">
+                    <div class="team-card__avatar" data-init="KV"></div>
+                    <h3>Klára Voštěnáková</h3>
+                    <p class="team-card__role">Péče &amp; pánský střih</p>
+                    <p>Šetrné ošetření vlasové pokožky, OlaPlex a&nbsp;preciznost při pánských střizích.</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- ============ TESTIMONIALS ============ -->
+        <section class="quotes" id="quotes">
+            <div class="quotes__inner">
+                <p class="section__eyebrow reveal">— Co o nás říkají</p>
+                <div class="quotes__stage" id="quotesStage">
+                    <blockquote class="quote is-active">
+                        <p>„Konečně jsem našla salón, kam se těším. Marie mi udělala balayage, který drží už šestý měsíc a&nbsp;pořád vypadá jako čerstvý."</p>
+                        <footer>
+                            <span class="quote__avatar" aria-hidden="true">EN</span>
+                            <span class="quote__who">Eliška N.<span>klientka od 2021</span></span>
+                        </footer>
+                    </blockquote>
+                    <blockquote class="quote">
+                        <p>„Svatební účes od holek z GOODLOOK byl perfektní — držel celý den a&nbsp;ještě na něm bylo vidět, že to dělal někdo se srdcem."</p>
+                        <footer>
+                            <span class="quote__avatar" aria-hidden="true">TM</span>
+                            <span class="quote__who">Tereza M.<span>nevěsta 2024</span></span>
+                        </footer>
+                    </blockquote>
+                    <blockquote class="quote">
+                        <p>„Atmosféra studia je něco neuvěřitelného. Sedíte v křesle, kolem vás malby, rostliny, voní káva — a&nbsp;odcházíte s vlasy jak po focení."</p>
+                        <footer>
+                            <span class="quote__avatar" aria-hidden="true">PD</span>
+                            <span class="quote__who">Petra D.<span>pravidelná klientka</span></span>
+                        </footer>
+                    </blockquote>
+                </div>
+                <div class="quotes__dots" id="quotesDots" aria-hidden="true"></div>
+            </div>
+        </section>
+
+        <!-- ============ VISIT / CONTACT ============ -->
+        <section class="visit" id="visit">
+            <div class="visit__card reveal">
+                <div class="visit__info">
+                    <p class="section__eyebrow">— Přijďte k&nbsp;nám</p>
+                    <h2 class="section__title">Najdete nás v&nbsp;Jahodnici</h2>
+                    <p class="visit__lead">
+                        Klidné prostředí kousek od Hostavického potoka, vlastní parkování
+                        před studiem. Stačí si online vybrat termín — a&nbsp;těšíme se na vás.
+                    </p>
+
+                    <ul class="visit__details">
+                        <li>
+                            <span class="visit__ico" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-7.6-8-13a8 8 0 1 1 16 0c0 5.4-8 13-8 13Z"/><circle cx="12" cy="9" r="3"/></svg>
+                            </span>
+                            <div><strong>Adresa</strong><br />
+                                <a href="https://maps.google.com/?q=U+Hostavick%C3%A9ho+potoka+830%2F26+Praha+14" target="_blank" rel="noopener">U Hostavického potoka 830/26, Praha 14 — Jahodnice</a>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="visit__ico" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                            </span>
+                            <div><strong>Otevírací doba</strong><br />Po–Út&nbsp;8:30–20:00 · St–Čt&nbsp;7:30–14:00 · Pá–So dle dohody</div>
+                        </li>
+                        <li>
+                            <span class="visit__ico" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7 12.8 12.8 0 0 0 .7 2.8 2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5 12.8 12.8 0 0 0 2.8.7 2 2 0 0 1 1.8 2Z"/></svg>
+                            </span>
+                            <div><strong>Spojte se s námi</strong><br />
+                                <a href="tel:+420731472773">731 472 773</a> · <a href="mailto:info@studio-goodlook.cz">info@studio-goodlook.cz</a>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="visit__socials">
+                        <a href="https://www.facebook.com/studio.goodlook" target="_blank" rel="noopener" class="social">Facebook</a>
+                        <a href="https://goodlook.snippet.myfox.cz/" target="_blank" rel="noopener" class="social">Online rezervace</a>
+                    </div>
+                </div>
+
+                <form class="visit__form" id="reserveForm" name="reservation" method="POST"
+                      action="https://formspree.io/f/your-form-id" novalidate>
+                    <h3>Napište nám</h3>
+                    <p class="visit__form-lead">Není vám jasné, kterou službu vybrat? Rádi vám poradíme.</p>
+                    <input type="hidden" name="form-name" value="reservation" />
+                    <p hidden aria-hidden="true"><label>Nechte prázdné <input name="bot-field" /></label></p>
+                    <div class="field">
+                        <input type="text" id="rname" name="name" required placeholder=" " autocomplete="name" />
+                        <label for="rname">Vaše jméno</label>
+                    </div>
+                    <div class="field">
+                        <input type="email" id="remail" name="email" required placeholder=" " autocomplete="email" />
+                        <label for="remail">E-mail</label>
+                    </div>
+                    <div class="field field--row">
+                        <div class="field">
+                            <input type="tel" id="rphone" name="phone" placeholder=" " autocomplete="tel" />
+                            <label for="rphone">Telefon (volitelně)</label>
+                        </div>
+                        <div class="field">
+                            <select id="rservice" name="service" required>
+                                <option value="">— Vyberte službu —</option>
+                                <option value="cut">Střih &amp; mytí</option>
+                                <option value="color">Barva / balayage</option>
+                                <option value="treat">Péče / OlaPlex</option>
+                                <option value="event">Svatba / příležitost</option>
+                                <option value="other">Jiné / poradenství</option>
+                            </select>
+                            <label for="rservice" class="label--static">Služba</label>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <textarea id="rnote" name="note" rows="3" placeholder=" "></textarea>
+                        <label for="rnote">Co byste si přáli? (volitelně)</label>
+                    </div>
+                    <button type="submit" class="btn btn--solid btn--full">Odeslat poptávku</button>
+                    <p class="visit__form-note" id="formNote" role="status"></p>
+                </form>
+            </div>
+
+            <div class="visit__map reveal">
+                <iframe
+                    title="Mapa s polohou Studia GOODLOOK"
+                    src="https://maps.google.com/maps?q=U%20Hostavick%C3%A9ho%20potoka%20830%2F26%20Praha%2014&t=&z=15&ie=UTF8&iwloc=&output=embed"
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============ FOOTER ============ -->
+    <footer class="footer">
+        <div class="footer__top">
+            <div class="footer__brand">
+                <span class="nav__name"><em>good</em>look</span>
+                <p>Kadeřnické studio v Praze 14, kde se z vlasů stává umění a&nbsp;každá návštěva je malá pauza pro vás.</p>
+            </div>
+            <div class="footer__cols">
+                <div>
+                    <h4>Studio</h4>
+                    <a href="#about">O nás</a>
+                    <a href="#gallery">Atelier</a>
+                    <a href="#team">Tým</a>
+                </div>
+                <div>
+                    <h4>Služby</h4>
+                    <a href="#services">Střih &amp; barva</a>
+                    <a href="#services">Balayage</a>
+                    <a href="#services">Svatební účesy</a>
+                </div>
+                <div>
+                    <h4>Návštěva</h4>
+                    <a href="#visit">Otevírací doba</a>
+                    <a href="#visit">Kontakt</a>
+                    <a href="https://goodlook.snippet.myfox.cz/" target="_blank" rel="noopener">Rezervace</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>© <span id="year">2026</span> Studio GOODLOOK · Marie Jarolímková · IČO 70766517</p>
+            <p class="footer__credit">Vyrobeno s ❀ &amp; láskou k řemeslu</p>
+        </div>
+    </footer>
+
+    <!-- Back to top -->
+    <button class="to-top" id="toTop" aria-label="Nahoru">↑</button>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Prohlížeč obrázků">
+        <button class="lightbox__close" id="lbClose" aria-label="Zavřít">✕</button>
+        <button class="lightbox__nav lightbox__nav--prev" id="lbPrev" aria-label="Předchozí">‹</button>
+        <img class="lightbox__img" id="lbImg" src="" alt="" />
+        <button class="lightbox__nav lightbox__nav--next" id="lbNext" aria-label="Další">›</button>
+        <p class="lightbox__cap" id="lbCap"></p>
+    </div>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>
