@@ -649,7 +649,11 @@ h1 em, h2 em, h3 em {
     display: grid; place-content: center; text-align: center;
     z-index: 5;
     box-shadow: var(--shadow-md);
-    animation: spinSlow 26s linear infinite;
+    animation: badgeFloat 5s ease-in-out infinite;
+}
+@keyframes badgeFloat {
+    0%, 100% { translate: 0 0;    }
+    50%      { translate: 0 -8px; }
 }
 .story__badge-num {
     display: block;
@@ -660,7 +664,6 @@ h1 em, h2 em, h3 em {
     display: block;
     font-size: .7rem; letter-spacing: .14em; text-transform: uppercase;
     margin-top: .35rem;
-    animation: spinSlow 26s linear infinite reverse;
 }
 
 .story__text p { color: var(--text-soft); }
